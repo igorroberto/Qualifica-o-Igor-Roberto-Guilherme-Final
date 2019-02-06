@@ -1,0 +1,147 @@
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ICMC: Modelo de Trabalho Acadêmico (tese de doutorado, dissertação de
+% mestrado e trabalhos monográficos em geral) em conformidade com 
+% ABNT NBR 14724:2011: Informação e documentação - Trabalhos acadêmicos -
+% Apresentação
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+
+% Opções: 
+%   Qualificação         = qualificacao 
+%   Curso                = doutorado/mestrado
+%   Situação do trabalho = pre-defesa/pos-defesa (exceto para qualificação)
+\documentclass[qualificacao,mestrado]{packages/icmc}
+
+% ---------------------------------------------------------------------------
+% Pacotes Opcionais
+% ---------------------------------------------------------------------------
+\usepackage{rotating}           % Usado para rotacionar o texto
+\usepackage[all,knot,arc,import,poly]{xy}   % Pacote para desenhos gráficos
+% Este pacote pode conflitar com outros pacotes gráficos como o ``pictex''
+% Então é necessário usar apenas um dos pacotes conflitantes
+\newcommand{\VerbL}{0.52\textwidth}
+\newcommand{\LatL}{0.42\textwidth}
+% Comando simples para exibir comandos Latex no texto
+\newcommand{\comando}[1]{\textbf{$\backslash$#1}}
+% ---------------------------------------------------------------------------
+
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+% Tanto na capa quanto nas folhas de rosto apenas a primeira letra da primeira palavra (ou nomes próprios) devem estar em letra maiúscula, todas as demais devem ser em letra minúscula.
+
+\tituloPT{Uma proposta de ontologia para o gerenciamento da fila de espera na atenção básica de saúde}
+
+\tituloEN{An ontology proposal for the management of the queue in basic health care}
+\autor[Guilherme, I. R.]{Igor Roberto Guilherme}
+\genero{M} % Gênero do autor (M = Masculino / F = Feminino)
+\orientador[Orientador]{Prof. Dr.}{Dilvan de Abreu Moreira}
+%\coorientador{Prof. Dr.}{Fulano de Tal}
+\curso{CCMC}
+\data{03}{03}{2019} % Data do depósito
+\idioma{PT} % Idioma principal do documento (PT = português / EN = inglês)
+% ---
+
+
+% ---
+% RESUMOS
+% ---
+
+% Resumo em PORTUGUÊS
+% conter no máximo 500 palavras
+% conter no mínimo 1 e no máximo 5 palavras-chave
+\textoresumo[brazil]{
+O longo tempo de espera para o atendimento médico é um dos principais problemas do Sistema Único de Saúde (SUS). O tempo que um paciente é submetido a aguardar pelo atendimento, além de causar sofrimento, pode agravar a situação da enfermidade. A regulação destas filas é responsabilidade de cada município, que pode adotar enumeras formas de agendar um atendimento, não tendo a obrigatoriedade de expor os critérios de regulação. Em muitos casos são funcionários administrativos que realizam a gestão e ordenamento destas filas, sem ter um conhecimento aprofundado de cada caso para gerir de forma correta. Na literatura, há trabalhos que relatam casos de funcionários priorizando o atendimento de amigos e parentes. O computador por ser um item neutro, pode ajudar no gerenciamento destas filas, utilizando critérios definidos por especialistas. Para tal, é necessário que os dados estejam semanticamente representados, para a interpretação e gestão por parte das máquinas. A Web Semântica, através das ontologias permite a representação do conhecimento, possibilitando que as máquinas interpretem e auxiliem na gestão destas filas.
+Desta forma, o presente trabalho propõe o uso das tecnologias da Web Semântica, mais precisamente ontologias OWL, para a representação dos indicadores para classificação de prioridades para o atendimento de uma especialidade médica. Como estudo de caso, uma ontologia OWL para o Hospital das Clínicas da Faculdade de Medicina de Marília (FAMEMA) e um protótipo que utilize esta ontologia e gerencie uma fila de retorno para uma especialidade médica será implementado. Almeja-se que o modelo proposto se mostre como uma boa alternativa ao modelo atual de gestão de filas, e que após uma validação por especialistas(médicos) o gerenciamento computacional seja mais justo se comparado a um gerenciamento anterior realizado no HC.
+}{Fila de espera na saúde, Web Semântica, Sistema Único de Saúde, Ontologia}
+
+\textoresumo[english]{The long wait time for medical care is one of the main problems of the Unified Health System (SUS). The time that a patient is submitted to waiting for the care, besides causing suffering, can aggravate the situation of the illness. The regulation of these queues is the responsibility of each municipality, which can adopt a number of ways to schedule a service, not having to state the regulatory criteria. In many cases they are administrative employees who manage and order these queues without having an in-depth knowledge of each case to manage correctly. In the literature, there are papers that report cases of employees prioritizing the care of friends and relatives. Because the computer is a neutral item, it can help manage these queues by using criteria defined by experts. For this, it is necessary that the data be semantically represented, for the interpretation and management by the machines. The Semantic Web, through ontologies allows the representation of knowledge, allowing the machines to interpret and assist in the management of these queues. In this way, the present work proposes the use of Semantic Web technologies, more precisely OWL ontologies, for the representation of the indicators for classification of priorities for attending a medical specialty. As a case study, an OWL ontology for the Hospital das Clínicas of Marília Medical School (FAMEMA) and a prototype that uses this ontology and manages a return queue for a medical specialty will be implemented. It is hoped that the proposed model will prove to be a good alternative to the current queuing management model, and that after a validation by specialists (physicians) the computational management will be more fair when compared to previous management performed in HC.
+}{Waiting queue in health, Semantic Web,
+Health Unic System, Ontology}
+    
+% ---
+% Configurações de aparência do PDF final
+% ---
+\hypersetup{
+	colorlinks=true     % false: boxed links; true: colored links
+}
+% --- 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+% Inserir a ficha catalográfica
+% \incluifichacatalografica{tex/ficha-catalografica.pdf}
+
+% DEDICATÓRIA / AGRADECIMENTO / EPÍGRAFE
+%\textodedicatoria*{tex/pre-textual/dedicatoria}
+%\textoagradecimentos*{tex/pre-textual/agradecimentos}
+%\textoepigrafe*{tex/pre-textual/epigrafe}
+
+% Inclui a lista de figuras
+\incluilistadefiguras
+
+% Inclui a lista de tabelas
+\incluilistadetabelas
+
+% Inclui a lista de quadros
+% \incluilistadequadros
+
+% Inclui a lista de algoritmos
+%\incluilistadealgoritmos
+
+% Inclui a lista de códigos
+%\incluilistadecodigos
+
+% Inclui a lista de siglas e abreviaturas
+\incluilistadesiglas
+
+% Inclui a lista de símbolos
+%\incluilistadesimbolos
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+\chapter{Introdução}
+\label{chapter:introducao}
+\input{tex/textual/introducao/main}
+
+\chapter{Referencial Teórico}
+\label{chapter:referencial-teorico}
+\input{tex/textual/referencial-teorico/main}
+
+\chapter{Trabalhos Relacionados}
+\label{chapter:trabalhos-relacionados}
+\input{tex/textual/trabalhos-relacionados/main}
+
+\chapter{Proposta}
+\label{chapter:proposta}
+\input{tex/textual/proposta/main}
+
+
+% ---
+% Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
+% ---
+\bookmarksetup{startatroot}% 
+% ---
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{references}
+
+\end{document}
