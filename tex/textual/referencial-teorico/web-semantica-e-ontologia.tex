@@ -1,88 +1,95 @@
 \section{Web Semântica e Ontologia}
 
-	Apesar de ser criada para possibilitar o acesso, intercâmbio e recuperação de informação de forma simples e rápida, o crescimento caótico e exponencial da \textit{Web} fez com que ela se tornasse um enorme repositório de documentos, dificultando o processo de recuperação dos mesmos \cite{Suarez2017}. Ainda hoje não existe nenhuma estratégia abrangente e satisfatória o suficiente para organizar documentos por meio de motores de busca que seja coerente com uma estrutura linguística \cite{Ci.Inf.1077}. Um outro exemplo de deficiência da \textit{Web} atual pode ser identificado em buscas feitas em sistemas de recuperação de informação, que usam palavras-chave nas buscas, considerando apenas o grau de similaridade e nível de ocorrência de certas palavras no documento, ou seja, a semântica da busca é desconsiderada \cite{Ci.Inf.1077}.
+    Como apresentado até aqui, é necessário que sejam propostas novas soluções como forma de organizar os critérios de encaminhamento e priorização dos serviços básicos aos especializados. Mais que isso, possibilitar que o ordenamento e a gestão das listas de espera não fiquem refém de todos os fatores humanos associados a esse tipo de ação. Dessa forma, as tecnologias da Web Semântica podem auxiliar na gestão dessas listas, principalmente com a organização do conhecimento com as ontologias.
     
-    Apresentada por \citeonline{10.2307/26059207}, a Web Semântica surge como uma proposta de estruturar os dados e informações disponíveis na \textit{Web}, para que agreguem significado e passem a ser computáveis por máquinas. A Web Semântica é definida por um conjunto de padrões definidos pela organização chamada \sigla{W3C}{World Wide Web Consortium}. Na sua proposta original, ela é definida como um extensão da \textit{Web} atual que tem como objetivo criar uma \textit{Web} universal dos conhecimentos da humanidade.
+    Estima-se que na WEB existam cerca de 30 bilhões de documentos \cite{calderon2017deep}, que estão em diferentes formatos, como HTML, XML, PDF, CSV entre outros. Esses documentos são estruturados de diferentes formas para humanos, que tem a capacidade de interpretar os dados independente do formato do documento. Porém, essa diversidade de documentos acaba sendo um  grande obstáculo para o acesso, processamento e uso computacional desses dados.
     
-    Partindo dessa visão conceitual, \citeonline{10.2307/26059207} propuseram uma arquitetura de representação do conhecimento por camadas, conhecida pelos nomes de \textit{Semantic Web Stack}, \textit{Semantic Web Cake} e \textit{Semantic Web Layer Cake}, ilustrada na \autoref{fig:semanticcake}.
+    Em 2001, \citeonline{Berners2001} propuseram a Web Semântica, como forma de estruturar o conteúdo da web e permitir que o usuário possa realizar tarefas guiado por mecanismos chamados de agentes. Isso seria possível através da estruturação dos dados e da semântica presente em cada documento onde esses agentes virtuais conseguissem 'compreender'. Outro ganho que a proposta traria é de que as informações estariam interligadas e com fácil acesso, sendo dados interoperáveis.
+    No mesmo texto de apresentação da Web Semântica publicado na revista Scientific American, os autores relatam que a Web Semântica não é uma Web separada, mas uma extensão da atual, na qual a informação recebe um significado bem definido, permitindo que computadores e pessoas trabalharem em cooperação.
     
-    \begin{figure}[htb]
+   Para tornar a proposta aplicável, foi definida um arquitetura baseada em camadas, que pode ser melhor compreendida através da Figura 4.
+   
+     \begin{figure}[htb]
     	\centering
-        \caption{Arquitetura em camadas da Web Semântica.}
+        \caption{Arquitetura da Web Semântica.}
     	\label{fig:semanticcake}
-        \includegraphics[width=0.7\linewidth]{images/semantic-web-cake}
-        \fdireta{MIKA2005}
+        \includegraphics[width=0.7\linewidth]{images/semantic-cake}
+        \fdireta{Greenberg2003}
     \end{figure}
     
-    A partir das bases \textit{Unicode} e \textit{URI}, a arquitura da Web Semântica se organiza nas seguintes camadas:
+    Cada camada do chamado "bolo de noiva" da web semântica foi definida com o intuito de atingir o objetivo do modelo proposto.
     
     \begin{itemize}
-    	\item \textit{Unicode}: padrão de codificação de caracteres;
-        \item \textit{URI}: permite a representação de um recurso por meio de uma cadeia de caracteres única;
-        \item \sigla{XML}{\textit{eXtensible Markup Language}}: linguagem de marcação que permite a representação dos dados de forma sintática. Permite também a legibilidade das informações tanto por humanos quanto pelas máquinas;
-        \item \sigla{RDF}{\textit{Resource Description Framework}}: modelo padrão para intercâmbio de dados. Possui mecanismos para suportar a integração de dados mesmo de esquemas distintos, além de suportar a evolução dos esquemas ao longo do tempo sem necessitar de mudanças nos consumidores de dados;
-        \item \textit{Ontology}: estende a camada de descrição, fornecendo expressividade sobre conceitos, classificações, relações e inferências;
+    	\item \textit{Unicode}: é usado para representar qualquer caractere de maneira única, seja qual for o caractere e o idioma  que ele tenha sido escrito;
+        \item \sigla{URI}{\textit{Uniform Resource Identifier}}: é uma representação única de um recurso;
+        \item \sigla{XML}{\textit{eXtensible Markup Language}}: é uma linguagem de marcação e representação sintática de recursos de  maneira independente de plataforma a fim de agregar semântica aos documentos;
+        \item \sigla{RDF}{\textit{Resource Description Framework}}: é um modelo padrão para intercâmbio de dados. Possui recursos que facilitam a mesclagem de dados, mesmo se os esquemas subjacentes forem diferentes, e suporta especificamente a evolução dos esquemas ao longo do tempo, sem exigir que todos os consumidores de dados sejam alterados;
+        \item \textit{Ontology}: coleção de termos usados para descrever um domínio através das relações e classificações desses termos;
         \item \textit{Logic}: permite a definição de regras lógicas para deduzir e inferir novas informações. Essas regras são capazes de alterar dinamicamente a estrutura da ontologia;
         \item \textit{Proof}: provê mecanismos para averiguar a confiabilidade das fontes de informações;
         \item \textit{Trust}: representa o conhecimento validado e confiável;
         \textit{Digital Signature}: permite a integração de métodos de segurança que garantam a segurança da informação.
     \end{itemize}
     
-    Uma importante contribuição da Web Semântica é a formalização da representação das ontologias.
+    As ontologias exercem um papel fundamental na Web Semântica, pois são elas que permitem a relação de termos e conceitos de um domínio.
     
     \subsection{Ontologias}
     
-    	Ontologias da Web Semântica exercem um papel fundamental na confecção de um meio de descrição do conhecimento de especialistas de um domínio e, portanto, no \textit{design} de SADs baseados em conhecimento. Apesar do conceito de ontologia ser aplicável em vários campos, ele surgiu primeiro no ramo da filosofia, onde se refere ao estudo da realidade do ser,  da natureza e das suas relações \cite{sep-logic-ontology}.  Na área da ciência da computação, o conceito de ontologia é definido como uma especificação formal e explícita de conceitos relacionados em um determinado domínio de conhecimento \cite{Noy2001}. Mais especificamente, no campo da Web Semântica, \citeonline{9780123859662} definem ontologia como um esquema de representação que permite conceitualizar e estruturar um conhecimento de forma a habilitar a interpretação desse conhecimento pelas máquinas.
-    
-    	Como pode ser visto na \autoref{fig:kos-levels}, uma ontologia é o nível mais alto de um sistema de organização e representação do conhecimento, do inglês \sigla{KOS}{Knowledge Organization System}, que por sua vez é uma estrutura conceitual e computacional que permite representar conhecimentos de qualquer domínio por meio de entidades, classificações, relações semânticas e axiomas \cite{Cheng2016}. No nível mais baixo, os dados não possuem significado semântico, sendo dependentes do contexto da aplicação. O segundo nível envolve a definição de esquemas XML para alcançar a independência dos dados para com a aplicação, permitindo o intercâmbio de dados entre aplicações mas não entre domínios. Já no terceiro nível, os dados podem ser combinados a partir de diferentes domínios. No quarto e último nível, onde encontra-se as ontologias, é possível inferir novos dados a partir dos que já existem e compartilhá-los entre aplicações sem a necessidade de interferência humana \cite{9781439801567}.
+        O termo ontologia pode ter mais de um significado, dependendo da área de conhecimento onde for utilizado. Seu surgimento se deu na filosofia, sendo uma teoria sobre a natureza da existência e envolve uma categorização muito ampla da realidade \cite{CHATEUABRIAND1998}.
         
-        \begin{figure}[htbp]
-        	\centering
-        	\caption{Níveis de representação de dados na forma de conhecimento computável por máquinas.}
-            \label{fig:kos-levels}
-            \includegraphics[width=0.7\linewidth]{images/kos-levels}
-            \fdireta{9780123859662}
-        \end{figure}
+        Ontologia na ciência da computação começou a ser utilizada no início dos anos 90, para organização de grandes bases de conhecimento, seu uso se dava para a construção de grandes bases interoperáveis e melhor estruturadas \cite{MOREIRA2004}. 
         
-        Segundo \citeonline{Noy2001}, uma ontologia é especificada pelos seguintes componentes:
+        Na Web Semântica, as ontologias são usadas para descrever os conceitos de um domínio e a relação entre eles. O W3C relata que as ontologias devem prover descrições para os seguintes tipos de conceitos \cite{breitman2005web}:
         
         \begin{itemize}
-        	\item Classes: descrevem os conceitos de um domínio, habilitando a classificação e organização dos indivíduos em um sistema lógico e hierárquico;
-            \item Indivíduos: são as instâncias das classes, utilizados para representar elementos específicos, os objetos de interesse do domínio;
-            \item Relações: representam as interações entre os conceitos de um domínio e as propriedades presentes nas classes e indivíduos, podendo ter características próprias; 
-            \item Axiomas: modelam as regras assumidas como verdadeiras no domínio considerado, sendo possível associar relacionamentos entre indivíduos além de fornecer características descritivas e lógicas para as classes.
+    	\item  Classes (ou coisas) nos vários domínios de interesse;
+        \item  Relacionamento entre as classes;
+        \item  Propriedades (ou atributos) que as classes podem ter; 
         \end{itemize}
         
-        A partir dessas definições, existem padrões adotados pela comunidade para implementar os conceitos da Web Semântica. RDF e OWL são alguns dos padrões recomendados pela W3C e que serão apresentados a seguir.
-        
+   
 	\subsection{\textit{Resource Description Framework} e \textit{Web Ontology Language}}
     
-    	RDF é um modelo padrão para intercâmbio de dados para que estes sejam compartilhados e reusados por meio das fronteiras das aplicações, empresas e comunidades. O RDF é usado em diferentes domínios de aplicação como \textit{resource discovery} com o objetivo de aprimorar as capacidades dos motores de busca, catalogação de documentos, descrição de conteúdo e suas relações e descrição de propriedade intelectual. Seu modelo consiste em um conjunto de três tipos de objetos, chamados de tripla RDF. Os componentes são:
-        
+    	O RDF pode ser definido como um modelo padrão para intercâmbio de dados na Web. Ele é muito utilizado por conta de suas características que facilitam a fusão de dados, além de suportar a evolução dos esquemas sem a necessidade de que todos os dados sejam alterados, referenciando a relação de diferentes recursos \cite{W3C2014}.
+    	Esse framework foi desenvolvido para descrever recursos na Web. Segundo \citeonline{Shadbolt2006}, o objetivo do RDF é prover uma representação minimalista do conhecimento da Web.
+    	A estrutura do RDF é formada por triplas (Sujeito, Predicado, Objeto), como pode ser visto na Figura 5, sendo:
+    	
         \begin{itemize}
-        	\item Sujeito: representa os recursos e são identificados por meios de URIs;
-            \item Predicado:representa os aspectos, características, atributos ou relações específicas que descrevem o sujeito, onde cada predicado possui um valor específico e relaciona um sujeito a um objeto;
-            \item Objeto: um valor de uma propriedade ou um recurso específico que representa uma característica do sujeito.
+        	\item Sujeito: recursos  identificados por URIs;
+            \item Predicado: atributos ou relações que descrevem o sujeito e o relaciona a um objeto;
+            \item Objeto: um outro recurso ou valor que se relaciona com o sujeito através do predicado;
         \end{itemize}
         
-        Com triplas RDF é possível explicitar relações entre dois objetos, mas não é possível fazer modelagens mais expressivas nem mesmo inferências. Para alcançar essas características é necessário que a ontologia seja descrita em OWL.
-        
-        OWL é uma linguagem recomendada pela W3C para representação e compartilhamento de ontologias na \textit{Web}. Ela foi projetada para aplicações que necessitam processar a informação ao invés de apenas organizá-las em nós \cite{Mcguinness2004}. OWL permite que a semântica seja explicitamente associada ao conteúdo dos dados na \textit{web} e formalmente especificada por meio de ontologias compartilhadas na \textit{internet}.
-        
-        \begin{figure}[htbp]
+         \begin{figure}[htbp]
         	\centering
-            \caption{Diagrama de Venn sobre o relacionamento estre os perfis da linguagem OWL2.}
+            \caption{Exemplo de grafo}
             \label{fig:owl2-profiles}
-            \includegraphics[width=0.7\linewidth]{images/owl2-profiles}
-            \fadaptada{Alamri_2012}
+            \includegraphics[width=0.7\linewidth]{images/exemplo-tripla.png}
+            \fdireta{SANTOSNETO2013}
+        \end{figure}
+    	
+    	Através das triplas é possível representar o conhecimento de qualquer domínio. No caso da área da saúde, um exemplo de representação seria: uma pessoa, suas propriedades(idade, nome, sexo) e as possíveis relações que essa pessoa pode ter (doenças que teve, medicações aplicadas, exames realizados). 
+        
+        Como dito anteriormente, o RDF é um framework para descrever recursos, mas em qual formato? Qual estrutura? RDF pode ser serializado para diferentes formatos de acordo com a necessidade do uso. Na Figura 6 são apresentados os formatos de serialização do RDF, bem como a estrutura do código para cada formato e o propósito de uso de cada um.
+         
+         \begin{figure}[htbp]
+        	\centering
+            \caption{Formatos de serialização RDF}
+            \label{fig:owl2-profiles}
+            \includegraphics[width=1\linewidth]{images/serializacoes-rdf.png}
+            \fdireta{isotani2015dados}
         \end{figure}
         
-        A versão mais recente desta linguagem é a OWL2 que possui cinco diferentes perfis (sub-linguagens), como pode ser visto na \autoref{fig:owl2-profiles}. Cada um desses perfis permite um nível diferente de expressividade para cada cenário de aplicação. Esses perfis são:
+        Apesar do RDF permitir a descrição de ontologias, há algumas limitações quanto ao nível de expressividade que é possível alcançar, por consequência poucas inferências (capacidade que o computador deduza informações através de declarações estabelecidas) são possíveis. Por isso, foi desenvolvida uma linguagem mais expressiva denominada Web Ontology Language (OWL).
+        
+        A OWL também foi desenvolvida e é recomendada pelo W3C. Essa linguagem tem uma expressividade maior que o RDF ampliando suas possibilidades de representação de conhecimento. A primeira versão da OWL (1.0), possui 3 perfis de expressividade que permitem que aplicações, com diferentes objetivos, sejam construídas. Eles formam uma família de três variantes linguísticas de crescente poder expressivo: OWL Lite, OWL DL e OWL Full \cite{isotani2015dados}.
+        
+        Uma das limitações importantes da OWL 1 era a falta de um conjunto adequado de tipos de dados internos. Isso porque OWL depende do esquema XML (xsd) para a lista de tipos de dados internos. Por isso, uma nova versão foi criada: a OWL 2. Essa versão melhora consideravelmente os tipos de dados, além de abordar problemas agudos com expressividade. Um objetivo no desenvolvimento do OWL 2 foi fornecer uma plataforma robusta para o desenvolvimento futuro. Na OWL 2 foram definidos cinco perfis diferentes que podem ser utilizados para fins de representação distintos, são eles:
         
         \begin{itemize}
-        	\item Full: permite a máxima expressividade e liberdade sintática mas sem garantia computacional;
-            \item DL: desenvolvido para aplicações que requerem a máxima expressividade enquanto mantém a decidibilidade (computações terminam em tempo finito) e computabilidade (conclusões são garantidas de serem computáveis). Nesse perfil existem limitações sobre os recursos da linguagem para garantir as duas características citadas anteriormente;
-            \item EL: baseado em lógica descritiva, é útil para aplicações que contém um grande número de propriedades e/ou classes;
-            \item QL: permite o processo de raciocínio, do inglês \textit{reasoning}, eficiente para grandes quantidades de dados estruturados em ontologias relativamente simples;
-            \item RL: direcionado para aplicações que exigem \textit{reasoning} escalável em troca de restrições na expressividade. Favorece a implementação utilizando tecnologias baseadas em regras.
+        	\item Full: o nível mais completo de expressividade de OWL, porém não tem a garantia de decidibilidade computacional;
+            \item DL: possui o máximo de expressividade e a garantia computacional de que todas as inferências são computáveis e que têm decidibilidade com as inferências terminando em tempo finito;
+            \item EL: adequada para ontologias que definem um grande número de classes e/ou propriedades;
+            \item QL: possibilita a inferência em ontologias menos complexas e que possuem dados mais estruturados, como banco de dados relacionais.
+            \item RL: é voltado para aplicativos que exigem raciocínio escalável sem sacrificar muita energia com expressividade. Ele é projetado para acomodar aplicativos OWL 2 que podem trocar a expressividade total da linguagem pela eficiência.
         \end{itemize}
